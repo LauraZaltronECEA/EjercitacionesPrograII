@@ -22,3 +22,4 @@ myPerson = Persona(**params) #Doble asterisco para 'desarmar' la tupla
 # myPerson = Persona(edad=22, nombre="Laura")
 # myPerson = Persona(nombre="Laura", edad=22)
 myPerson.presentacion()
+
