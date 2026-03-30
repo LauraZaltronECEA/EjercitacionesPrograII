@@ -6,9 +6,19 @@ class Persona:
         print("Hola soy {} y tengo {} años"
         .format(self.nombre, self.edad))
 
-    def __init__(self, nombre, edad)
+    def __init__(self, edad, nombre="NN"):
         self.nombre = nombre
         self.edad = edad
 
+#Forma de pasar Pametros
 
-myPerson = Persona("Lau", 22)
+params = (22, "Lau")
+myPerson = Persona(*params) #Asterisco para 'desarmar' la tupla
+
+params = {"nombre": 'Laura', "edad":22}
+myPerson = Persona(**params) #Doble asterisco para 'desarmar' la tupla
+
+# myPerson = Persona(22)
+# myPerson = Persona(edad=22, nombre="Laura")
+# myPerson = Persona(nombre="Laura", edad=22)
+myPerson.presentacion()
