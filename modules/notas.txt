@@ -1,0 +1,16 @@
+Terminal:
+python
+import os
+os.getcwd() -> 'C:\\Users\\Alumnos\\Desktop\\ejercitacion'
+os.mkdir("name") ->Crea en tu path
+os.rmdir("name") -> removes dir
+dir(os) -> view modules' methods
+------------
+from os import mkdir -> import an specific method of an specific module. When you import single methods, you dont have to write the os.method.
+Dont import reserved-words this way. Doing so will override the value of the pythons' word.
+from os import * -> Prohibido, no hacer.
+import method as m -> setting an alias for a methods
+------------
+import this -> No define nada, no hace nada. Te escribe un poema de Tim.
+------------
+Crear modulo propio, con tus propias clases y metodos.
