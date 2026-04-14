@@ -4,6 +4,7 @@ from business.logic import Logic
 class App:
 
     def prompt(self):
+        print(20*"*", "Bienvenidos a la aplicacion",20*"*")
         dni = input("Ingrese DNI, solo numeros, sin puntos ni comas: ")
         nombre = input("Ingrese nombre: ")
 
@@ -13,4 +14,5 @@ class App:
             print("Datos Erroneos")
             return
         
+        print(myLogic.check())
         
