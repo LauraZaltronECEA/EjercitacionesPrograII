@@ -11,13 +11,13 @@ gastos  = [
 ]
 
 totales = []
-parciales = {}
+parciales = {} #Diccionario para almacenar los totales parciales por categoria.
 
 for gasto in gastos:
     try:
-        parciales[gasto["categoria"]] += gasto["monto"]
+        parciales[gasto["categoria"]] += gasto["monto"] #Si la categoria ya existe, se suma el monto al total parcial.
     except KeyError:
-        parciales[gasto["categoria"]] = gasto["monto"]
+        parciales[gasto["categoria"]] = gasto["monto"]#Si la categoria no existe, se crea una nueva entrada en el diccionario con el monto del gasto.
 
 for categoria in parciales.keys():
     totales.append([categoria, parciales[categoria]])
