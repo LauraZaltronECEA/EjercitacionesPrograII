@@ -41,3 +41,17 @@ Empleado(nombre="Mauro", apellido="Zaltron", hijos=0, activo= True)
 #modificacion de empleado
 mauro = Empleado.get(3)
 mauro.area = maestranza
+
+#Trae los empleados que trabajan en el area del id otorgado
+area = Area.get(2)
+print(area.empleados)
+
+#Seleccionar varios de un area especifica
+areaRRHH = Area.selectBy(nombre = "RECURSOS HUMANOS")
+
+for emp in areaRRHH.getOne().empleados:
+    emp.activo = False
+
+#como saber en q area trabaja un empleado
+emp = Empleado.get(1)
+print(emp.area.nombre)
