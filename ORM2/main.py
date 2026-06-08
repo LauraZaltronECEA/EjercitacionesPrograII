@@ -19,20 +19,25 @@ class Empleado(SO.SQLObject):
     activo = SO.BoolCol()
     area = SO.ForeignKey("Area",default=None,cascade=False) #Cascade modifica a todo lo que interpele este empleado
 
+#borro las tablas para ir testeando
 Empleado.dropTable(ifExists = True)
 Area.dropTable(ifExists = True)
 
+#creacion de tablas
 Area.createTable()
 Empleado.createTable()
 
+#creacion de areas
 contabilidad = Area(nombre="CONTABILIDAD")
 ingenieria = Area(nombre="INGENIERIA")
 maestranza = Area(nombre="MAESTRANZA")
 rrhh = Area(nombre="RECURSOS HUMANOS")
 
+#creacion de empleado
 Empleado(nombre="Manuel", apellido="Alvarez", hijos=2, activo= True, area = ingenieria)
 Empleado(nombre="Silvia", apellido="Menin", hijos=4, activo= True, area = rrhh)
 Empleado(nombre="Mauro", apellido="Zaltron", hijos=0, activo= True)
 
+#modificacion de empleado
 mauro = Empleado.get(3)
 mauro.area = maestranza
