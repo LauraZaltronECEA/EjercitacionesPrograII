@@ -78,6 +78,16 @@ print(emp.area.nombre)
 #agregar empleados a habilidades
 programacion.addEmpleado(Empleado.get(1))
 relacionesInterp.addEmpleado(Empleado.get(2))
+calculo.addEmpleado(Empleado.get(2))
 
 #agregar habilidad a un empleado
 Empleado.get(3).addHabilidad(Habilidad.get(1))
+
+#Ahora puedo traerme Empleados por Habilidad, o Habilidades por Empleado.
+print("Habilidad del Empleado con id {}:".format(Empleado.get(2).id))
+for hab in Empleado.get(2).habilidades:
+    print(hab.nombre)
+
+print("Empleados con la Habilidad {}:".format(Habilidad.get(1).nombre))
+for emp in Habilidad.get(1).empleados:
+    print(emp.nombre)
