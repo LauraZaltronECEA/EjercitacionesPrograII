@@ -9,4 +9,6 @@ def _deserialize(): #Esta hecho para ser usado solo dentro de ese archivo
 
 def get_currencies():
     currencies_data = _deserialize()
-    
+
+
+#TODO test() & other
